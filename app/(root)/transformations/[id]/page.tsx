@@ -6,6 +6,9 @@ import { Button } from '@/components/ui/button'
 import { getImageById } from '@/lib/actions/image.actions'
 import { getCurrentUser } from '@/lib/actions/user.actions'
 import Link from 'next/link'
+import { DeleteConfirmation } from "@/components/shared/DeleteConfirmation"
+import TransformedImage from "@/components/shared/TransformedImage"
+import PageHeader from "@/components/shared/PageHeader"
 
 const TransformationDetailsPage = async ({ params: { id } }: SearchParamProps) => {
   const user = await getCurrentUser();
