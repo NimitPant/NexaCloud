@@ -2,6 +2,7 @@
 
 import { loadStripe } from "@stripe/stripe-js";
 import { useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 
 import { useToast } from "@/components/ui/use-toast";
 import { checkoutCredits } from "@/lib/actions/transaction.action";
@@ -20,6 +21,7 @@ const Checkout = ({
   buyerId: string;
 }) => {
   const { toast } = useToast();
+  const searchParams = useSearchParams();
 
   useEffect(() => {
     loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
@@ -27,25 +29,25 @@ const Checkout = ({
 
   useEffect(() => {
     // Check to see if this is a redirect back from Checkout
-    const query = new URLSearchParams(window.location.search);
-    if (query.get("success")) {
+    // const query = new URLSearchParams(window.location.search);
+    if (searchParams.get('success')) {
       toast({
-        title: "Order placed!",
+        title: 'Order placed!',
         description: "You will receive an email confirmation",
         duration: 5000,
-        className: "success-toast",
+        className: 'success-toast'
       });
     }
 
-    if (query.get("canceled")) {
+    if (searchParams.get('canceled')) {
       toast({
-        title: "Order canceled!",
+        title: 'Order canceled!',
         description: "Continue to shop around and checkout when you're ready",
         duration: 5000,
-        className: "error-toast",
+        className: 'error-toast'
       });
     }
-  }, []);
+  }, [searchParams, toast]);
 
   const onCheckout = async () => {
     const transaction = {

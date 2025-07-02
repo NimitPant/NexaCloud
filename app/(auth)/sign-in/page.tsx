@@ -62,6 +62,13 @@ const SignInPage = () => {
           </Link>
         </p>
       </div>
+      <p className="p-16-regular mt-4">
+        Welcome back to NexaCloud!
+      </p>
+
+      <p className="p-14-medium text-center text-purple-700">
+        Let&apos;s get you signed in
+      </p>
     </>
   );
 };
