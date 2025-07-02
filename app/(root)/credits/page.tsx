@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation";
 import Image from "next/image";
-import Header from "@/components/shared/Header";
+import PageHeader from "@/components/shared/PageHeader";
 import { Button } from "@/components/ui/button";
 import { plans } from "@/constants";
 import { getCurrentUser } from "@/lib/actions/user.actions";
@@ -13,7 +13,7 @@ const CreditsPage = async () => {
 
   return (
     <>
-      <Header
+      <PageHeader
         title="Buy Credits"
         subtitle="Choose a credit package that suits your needs!"
       />
