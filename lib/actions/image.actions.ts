@@ -6,7 +6,6 @@ import { handleError } from "../utils";
 import User from "../database/models/user.model";
 import Image from "../database/models/image.model";
 import { redirect } from "next/navigation";
-
 import { v2 as cloudinary } from 'cloudinary'
 
 const populateUser = (query: any) => query.populate({
@@ -101,8 +100,6 @@ export async function getAllImages({ limit = 9, page = 1, searchQuery = '' }: {
   try {
     await connectToDatabase();
 
-    const cloneUrl = cloudinary.v2.url
-    
     let query = {};
 
     if(searchQuery) {
