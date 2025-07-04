@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation";
 
-import Header from "@/components/shared/Header";
+import PageHeader from "@/components/shared/PageHeader";
 import Image from "next/image";
 import { Collection } from "@/components/shared/Collection";
 import { getUserImages } from "@/lib/actions/image.actions";
@@ -18,7 +18,7 @@ const ProfilePage = async ({ searchParams }: SearchParamProps) => {
 
   return (
     <>
-      <Header title="Profile" />
+      <PageHeader title="Profile" />
 
       <section className="profile">
         <div className="profile-balance">
