@@ -1,6 +1,6 @@
 import { redirect } from 'next/navigation';
 
-import Header from '@/components/shared/Header'
+import PageHeader from '@/components/shared/PageHeader'
 import TransformationForm from '@/components/shared/TransformationForm'
 import { transformationTypes } from '@/constants'
 import { getImageById } from '@/lib/actions/image.actions'
@@ -15,7 +15,7 @@ const UpdateTransformationPage = async ({ params: { id } }: SearchParamProps) =>
 
   return (
     <>
-      <Header 
+      <PageHeader 
         title={transformation.title}
         subtitle={transformation.subTitle}
       />
