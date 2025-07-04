@@ -8,6 +8,8 @@ import { getCurrentUser } from "@/lib/actions/user.actions";
 import { Button } from "@/components/ui/button";
 import { SignOutButton } from "@/components/shared/SignOutButton";
 
+export const dynamic = 'force-dynamic'
+
 const ProfilePage = async ({ searchParams }: SearchParamProps) => {
   const page = Number(searchParams?.page) || 1;
   const user = await getCurrentUser();

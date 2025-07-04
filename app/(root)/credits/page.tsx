@@ -6,6 +6,8 @@ import { plans } from "@/constants";
 import { getCurrentUser } from "@/lib/actions/user.actions";
 import Checkout from "@/components/shared/Checkout";
 
+export const dynamic = 'force-dynamic'
+
 const CreditsPage = async () => {
   const user = await getCurrentUser();
 
