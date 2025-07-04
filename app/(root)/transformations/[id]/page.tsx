@@ -1,14 +1,13 @@
 import { redirect } from 'next/navigation'
 import Image from 'next/image'
 
-import Header from '@/components/shared/Header'
+import PageHeader from '@/components/shared/PageHeader'
 import { Button } from '@/components/ui/button'
 import { getImageById } from '@/lib/actions/image.actions'
 import { getCurrentUser } from '@/lib/actions/user.actions'
 import Link from 'next/link'
 import { DeleteConfirmation } from "@/components/shared/DeleteConfirmation"
 import TransformedImage from "@/components/shared/TransformedImage"
-import PageHeader from "@/components/shared/PageHeader"
 
 const TransformationDetailsPage = async ({ params: { id } }: SearchParamProps) => {
   const user = await getCurrentUser();
@@ -18,7 +17,7 @@ const TransformationDetailsPage = async ({ params: { id } }: SearchParamProps) =
 
   return (
     <>
-      <Header title={image.title} />
+      <PageHeader title={image.title} />
 
       <section className="mt-5 flex flex-wrap gap-4">
         <div className="p-14-medium md:p-16-medium flex gap-2">
