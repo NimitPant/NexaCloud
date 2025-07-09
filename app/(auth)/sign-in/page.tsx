@@ -7,12 +7,14 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { useToast } from "@/components/ui/use-toast";
 
 const SignInPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const router = useRouter();
+  const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -26,8 +28,14 @@ const SignInPage = () => {
       });
 
       if (res.ok) {
+        setTimeout(()=>{
+          toast({
+            title: "Signed in successfully.",
+            description: "Welcome back!",
+          })
+        }, 1000);
         router.push("/");
-        router.refresh(); // To reflect logged-in state in header
+        router.refresh();
       } else {
         const data = await res.json();
         setError(data.error || "Something went wrong.");
@@ -38,7 +46,7 @@ const SignInPage = () => {
   };
 
   return (
-    <main className="flex-center min-h-screen w-full bg-purple-100 bg-dotted-pattern bg-cover bg-fixed bg-center">
+    <>
       <section className="wrapper">
         <div className="text-center">
           <h1 className="h1-bold text-dark-700">Welcome Back</h1>
@@ -73,7 +81,7 @@ const SignInPage = () => {
           </div>
         </div>
       </section>
-    </main>
+    </>
   );
 };
 
