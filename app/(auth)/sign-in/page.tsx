@@ -33,7 +33,7 @@ const SignInPage = () => {
             title: "Signed in successfully.",
             description: "Welcome back!",
           })
-        }, 1000);
+        }, 2000);
         router.push("/");
         router.refresh();
       } else {
