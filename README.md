@@ -1,6 +1,6 @@
 # 🤖 NexaCloud – AI-Powered Image Transformation Platform
 
-image.png
+[image](readme_cover.png)
 
 Create a powerful SaaS application centered around AI-driven image editing. This platform offers top-tier image processing features, intelligent image search, and multiple AI enhancements such as:
 
@@ -54,7 +54,7 @@ Ensure the following are installed:
 ### 📦 Clone the Repository
 
 ```bash
-git clone https://github.com/adrianhajdin/imaginify.git
+git clone https://github.com/NimitPant/NexaCloud.git
 cd NexaCloud
 ```
 
