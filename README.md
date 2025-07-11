@@ -1,6 +1,7 @@
 # 🤖 NexaCloud – AI-Powered Image Transformation Platform
 
-[image](/assets/images/readme_cover.png)
+![Readme Cover](/assets/images/readme_cover.png)
+
 
 Create a powerful SaaS application centered around AI-driven image editing. This platform offers top-tier image processing features, intelligent image search, and multiple AI enhancements such as:
 
