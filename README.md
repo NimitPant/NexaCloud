@@ -1,59 +1,51 @@
-# 🤖 Imaginify – AI Image SaaS Platform
+# 🤖 NexaCloud – AI-Powered Image Transformation Platform
 
-Build an AI image SaaS platform that excels in image processing capabilities, integrates secure payment infrastructure, offers advanced image search functionalities, and supports multiple AI features including:
+image.png
 
-- Image Restoration
+Create a powerful SaaS application centered around AI-driven image editing. This platform offers top-tier image processing features, intelligent image search, and multiple AI enhancements such as:
+
+- Image Repair
 - Recoloring
-- Object Removal
-- Generative Fill
-- Background Removal
+- Object Elimination
+- Smart Fill-In
+- Background Extraction
 
-This project can serve as a portfolio-boosting guide for your next AI image tool.
-
-> 💬 **Need Help?**  
-Join our active [Discord community](https://discord.gg/) with over **27k+ members** – a supportive space to ask questions and debug issues.
-
----
-
-## ⚙️ Tech Stack
+## ⚙️ Technology Stack
 
 - **Next.js**
 - **TypeScript**
 - **MongoDB**
-- **Clerk** (Authentication)
-- **Cloudinary** (Image hosting)
-- **Stripe** (Payments)
+- **Cloudinary** (Media Hosting)
 - **Shadcn UI**
 - **TailwindCSS**
+- **Custom JWT Authentication** (using JWT, bcrypt, and custom API routes)
 
 ---
 
-## 🔋 Features
+## 🔋 Core Features
 
-- 🔐 **Authentication & Authorization**: Secure user access with Clerk – includes sign-up, login, route protection  
-- 🖼️ **Community Image Showcase**: Explore user image transformations with pagination  
-- 🔎 **Advanced Image Search**: Search images by content or objects within them  
-- 🛠️ **Image Restoration**: Revive old or damaged images  
-- 🎨 **Image Recoloring**: Replace object colors within images  
-- 🧠 **Generative Fill**: AI-powered fill for missing image areas  
-- 🧹 **Object Removal**: Precisely remove unwanted items  
-- 🪄 **Background Removal**: Isolate objects from their backgrounds  
-- 💾 **Download Transformed Images**: Save and share results easily  
-- 🧾 **View Transformation Details**: See insights on each image modification  
-- ⚙️ **Manage Transformations**: Update or delete image modifications  
-- 💳 **Credits System**: Earn or buy credits to access features  
-- 👤 **User Profile Page**: View personal transformations and credits  
-- 💰 **Credits Purchase**: Securely buy credits via Stripe  
-- 📱 **Responsive UI/UX**: Seamless experience across all device sizes  
-- ♻️ **Reusable Code Architecture**: Clean, maintainable, scalable code structure  
+- 🔐 **JWT-Based Authentication**: Implement secure user sessions using custom JSON Web Tokens (JWT) for flexible and scalable authentication across the platform
+- 🌐 **Explore Public Gallery**: Browse AI-edited images shared by the community with smooth pagination  
+- 🔎 **Smart Image Lookup**: Search for visuals by analyzing image content and detected objects  
+- 🛠️ **Image Restoration**: Breathe new life into old or degraded images  
+- 🎨 **Color Transformation**: Alter object colors within photos to suit your preferences  
+- 🧠 **AI-Powered Fill**: Automatically complete missing portions of an image  
+- 🧹 **Object Cleanup**: Remove unwanted elements from images accurately  
+- 🪄 **Background Isolation**: Effortlessly separate objects from their backgrounds  
+- 💾 **Save Your Results**: Download and share AI-enhanced images with ease  
+- 📋 **Edit Details View**: Access transformation history and insights  
+- ⚙️ **Transformation Control**: Update or delete image edits on demand  
+- 👤 **User Dashboard**: See your edited images and manage credit usage  
+- 📱 **Mobile-Optimized Design**: Fully responsive and user-friendly across devices  
+- ♻️ **Modular Codebase**: Built with scalability and reusability in mind  
 
 ---
 
-## 🤸 Quick Start
+## 🤸 Getting Started
 
-### Prerequisites
+### Requirements
 
-Ensure you have the following installed:
+Ensure the following are installed:
 
 - Git
 - Node.js
@@ -63,7 +55,7 @@ Ensure you have the following installed:
 
 ```bash
 git clone https://github.com/adrianhajdin/imaginify.git
-cd imaginify
+cd NexaCloud
 ```
 
 ### 📥 Install Dependencies
@@ -72,9 +64,9 @@ cd imaginify
 npm install
 ```
 
-### ⚙️ Set Up Environment Variables
+### ⚙️ Configure Environment Variables
 
-Create a file named `.env.local` in the root of the project and add the following:
+Create a `.env.local` file in the root directory and insert:
 
 ```bash
 # NEXT
@@ -83,53 +75,18 @@ NEXT_PUBLIC_SERVER_URL=
 # MONGODB
 MONGODB_URL=
 
-# CLERK
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
-CLERK_SECRET_KEY=
-WEBHOOK_SECRET=
 
-NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
-NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
-NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
-NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
 
 # CLOUDINARY
 NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=
 CLOUDINARY_API_KEY=
 CLOUDINARY_API_SECRET=
-
-# STRIPE
-STRIPE_SECRET_KEY=
-STRIPE_WEBHOOK_SECRET=
-NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=
 ```
 
-> 📝 Replace the placeholders with actual credentials from:
-> - [Clerk](https://clerk.dev)
-> - [MongoDB](https://mongodb.com)
-> - [Cloudinary](https://cloudinary.com)
-> - [Stripe](https://stripe.com)
-
-### 🚀 Run the Project
+### 🚀 Launch the App
 
 ```bash
 npm run dev
 ```
 
-Visit `http://localhost:3000` to explore the platform locally.
-
----
-
-## 📚 License
-
-MIT
-
----
-
-## 👨‍💻 Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
----
-
-Happy Coding! 🎉
+Navigate to `http://localhost:3000` in your browser to start using the platform locally.
