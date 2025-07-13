@@ -24,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn("font-IBMPlex antialiased", IBMPlex.variable)}>
+      <p>Hello</p>
         {children}
         <Toaster />
       </body>

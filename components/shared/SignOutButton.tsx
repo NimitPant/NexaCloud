@@ -18,13 +18,14 @@ export const SignOutButton = () => {
       });
 
       if (response.ok) {
-        toast({
-          title: "Signed out successfully.",
-        });
-        setTimeout(() => {
-          router.push('/sign-in');
-          router.refresh();
-        }, 1000);
+        setTimeout(()=>{
+          toast({
+            title: "Signed out successfully.",
+          })
+        }, 0);
+        router.push('/sign-in');
+        router.refresh();
+        
       } else {
         console.error('Failed to sign out');
       }

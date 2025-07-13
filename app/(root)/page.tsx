@@ -6,7 +6,7 @@ import Link from "next/link"
 
 export const dynamic = 'force-dynamic'
 
-const Home = async ({ searchParams }: SearchParamProps) => {
+const Home = async function({ searchParams }: SearchParamProps){ 
   const page = Number(searchParams?.page) || 1;
   const searchQuery = (searchParams?.query as string) || '';
 
@@ -14,9 +14,10 @@ const Home = async ({ searchParams }: SearchParamProps) => {
 
   return (
     <>
+      {/* MY HERO SECTION */}
       <section className="home">
         <h1 className="home-heading">
-          Unleash Your Creative Vision with Imaginify
+          Unleash Your Creative Vision with NexaCloud
         </h1>
         <ul className="flex-center w-full gap-20">
           {navLinks.slice(1, 5).map((link) => (
@@ -34,8 +35,8 @@ const Home = async ({ searchParams }: SearchParamProps) => {
         </ul>
       </section>
 
+      {/* MY COLLECTION SECTION */}
       <section className="sm:mt-12">
-        {/* Image Collection */}
         <Collection 
           hasSearch={true}
           images={images?.data}
